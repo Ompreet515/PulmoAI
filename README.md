@@ -5,7 +5,6 @@
 
 # 1. Overview
 
-<<<<<<< HEAD
 PulmoAI is an AI-powered healthcare application developed for automated pneumonia detection using both chest X-ray and CT scan images. The framework employs a multimodal deep learning approach by utilizing separate MobileNetV2-based convolutional neural networks for each imaging modality and combining their predictions through a confidence-aware fusion mechanism. To improve transparency and trustworthiness, PulmoAI integrates Explainable AI techniques such as Grad-CAM and SHAP, enabling visual and feature-level interpretation of model decisions. An Agentic AI module further generates human-readable explanations for the prediction results. The complete system is deployed through a Flask-based web application for real-time image upload, prediction, and visualization.
 
 ---
@@ -211,7 +210,6 @@ SRM Institute of Science and Technology, Kattankulathur
 ## Project Description
 
 PulmoAI is a multimodal deep learning framework designed for automated pneumonia detection using chest X-ray and CT scan images. The system utilizes separate MobileNetV2-based models for modality-specific classification and combines their predictions through a confidence-aware fusion mechanism to improve diagnostic reliability. To enhance transparency and trustworthiness, PulmoAI integrates Explainable AI techniques including Grad-CAM and SHAP, providing visual and feature-level interpretations of model predictions. An Agentic AI module further generates human-readable explanations to assist users in understanding diagnostic outcomes. The framework is deployed through a Flask-based web application that enables real-time image upload, prediction, and visualization. By combining multimodal learning, explainable AI, and intelligent deployment, PulmoAI offers an accurate, interpretable, and practical solution for AI-assisted pneumonia diagnosis.
-=======
+
 ## Author
 Ompreet Choudhury
->>>>>>> b052df578f734a3e273d5bbcaad8900bcc53ff05
