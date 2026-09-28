@@ -58,16 +58,17 @@ Input Images (Chest X-ray & CT Scan)
 
 ---
 
-# 4. Performance
+# Performance
 
-| Metric | Value |
-|----------|----------|
-| Accuracy | 92.8% |
-| Precision | 92.4% |
-| Recall | 96.4% |
-| F1-Score | 94.4% |
+The proposed PulmoAI framework was evaluated using modality-specific Chest X-ray and CT scan models, followed by a confidence-aware fusion strategy. The fusion model achieved the highest overall performance, demonstrating the effectiveness of combining complementary information from both imaging modalities.
 
-The proposed PulmoAI framework demonstrates strong performance in pneumonia detection by effectively combining chest X-ray and CT scan information. The high recall value indicates improved sensitivity in identifying pneumonia-positive cases, which is particularly important in healthcare applications.
+| Model | Accuracy | Precision | Recall | F1-Score |
+|---------|----------|----------|----------|----------|
+| X-ray CNN | 83.0% | 79.0% | 99.0% | 88.0% |
+| CT CNN | 90.0% | 100.0% | 85.0% | 92.0% |
+| Proposed Fusion Model | 93.0% | 92.0% | 96.0% | 94.0% |
+
+The results indicate that the fusion model outperformed the individual modality-specific models by leveraging information from both Chest X-ray and CT scan images. The fusion approach achieved the highest accuracy (93%) and F1-score (94%), highlighting its improved reliability and diagnostic effectiveness for pneumonia detection.
 
 ---
 
