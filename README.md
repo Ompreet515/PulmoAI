@@ -10,4 +10,4 @@ pneumonia detection using Chest X-ray and CT scan images.
 - Multimodal decision fusion with confidence score
 
 ## Author
-Your Name
+Ompreet Choudhury
