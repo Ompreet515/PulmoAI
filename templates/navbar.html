@@ -1,0 +1,17 @@
+<nav class="navbar">
+    <div class="logo">🩺 PulmoAI</div>
+    <ul>
+        <li class="{{ 'active' if active_page == 'home' else '' }}">
+            <a href="/">Home</a>
+        </li>
+        <li class="{{ 'active' if active_page == 'predict' else '' }}">
+            <a href="/predict">Predict</a>
+        </li>
+        <li class="{{ 'active' if active_page == 'gradcam' else '' }}">
+            <a href="/gradcam">Grad-CAM</a>
+        </li>
+        <li class="{{ 'active' if active_page == 'shap' else '' }}">
+            <a href="/shap">SHAP</a>
+        </li>
+    </ul>
+</nav>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predict | PulmoAI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="predict">
+
+<div class="container">
+
+    {% include "navbar.html" %}
+
+    <div class="card">
+        <h1>Pneumonia Prediction</h1>
+
+        {% if error %}
+            <p style="color:red;">{{ error }}</p>
+        {% endif %}
+
+        <form method="POST" enctype="multipart/form-data">
+
+            <div class="upload-block">
+                <div class="upload-label">Chest X-ray</div>
+                <input type="file" name="xray" required>
+            </div>
+
+            <div class="upload-block">
+                <div class="upload-label">CT Scan</div>
+                <input type="file" name="ct" required>
+            </div>
+
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+
+    {% if result %}
+    <div class="card">
+        <h2>Prediction Result</h2>
+
+        <p><strong>Diagnosis:</strong> {{ result }}</p>
+        <p><strong>Probability:</strong> {{ probability }}</p>
+        <p><strong>Confidence:</strong> {{ confidence }}</p>
+
+        <br>
+
+        <a href="/gradcam">View Grad-CAM →</a><br>
+        <a href="/shap">View SHAP →</a>
+
+        <br><br>
+
+        <a href="/clear">
+            <button>Clear Analysis</button>
+        </a>
+    </div>
+    {% endif %}
+
+    {% if clinical_report %}
+    <div class="card">
+        <h2>AI Clinical Interpretation</h2>
+        <p>{{ clinical_report }}</p>
+    </div>
+    {% endif %}
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PulmoAI | AI-Powered Pneumonia Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="home">
+<div class="container">
+
+{% include 'navbar.html' %}
+
+<!-- HERO SECTION -->
+<div class="card" style="text-align:center; padding:50px 40px;">
+    <h1 style="font-size:36px; margin-bottom:15px;">
+        PulmoAI: AI-Powered Pneumonia Detection System
+    </h1>
+
+    <p style="font-size:18px; opacity:0.9; margin-bottom:15px;">
+        Hope you are doing well. PulmoAI is an AI-driven clinical decision-support
+        platform designed to assist in early pneumonia detection using multimodal
+        medical imaging.
+    </p>
+
+    <p style="font-style:italic; opacity:0.85;">
+        “Combining intelligence, transparency, and trust in healthcare.”
+    </p>
+
+    <div style="margin-top:25px;">
+        <a href="/predict">
+            <button>Start Analysis</button>
+        </a>
+    </div>
+</div>
+
+<!-- ABOUT SECTION -->
+<div class="card">
+    <h2>About the System</h2>
+    <p>
+        PulmoAI integrates fine-tuned deep learning models with explainable AI
+        techniques and an agentic AI interpretation layer. The system not only
+        predicts pneumonia probability from Chest X-rays and CT scan slices, but
+        also provides visual reasoning and clinically meaningful explanations,
+        enabling interpretable and transparent AI-assisted diagnostics.
+    </p>
+</div>
+
+<!-- FEATURES GRID -->
+<div class="card">
+    <h2 style="margin-bottom:20px;">Core Capabilities</h2>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+
+        <div class="upload-block">
+            <h3>AI-Based Detection</h3>
+            <p>
+                Pneumonia prediction using fine-tuned convolutional neural networks
+                optimized for medical imaging analysis.
+            </p>
+        </div>
+
+        <div class="upload-block">
+            <h3>Multimodal Intelligence</h3>
+            <p>
+                Fusion-based decision system combining Chest X-ray and CT scan
+                information for robust clinical assessment.
+            </p>
+        </div>
+
+        <div class="upload-block">
+            <h3>Grad-CAM Interpretability</h3>
+            <p>
+                Visual attention mapping highlighting regions influencing model
+                predictions, supporting diagnostic transparency.
+            </p>
+        </div>
+
+        <div class="upload-block">
+            <h3>SHAP Explainability</h3>
+            <p>
+                Pixel-level feature attribution revealing critical image patterns
+                contributing to AI decision-making.
+            </p>
+        </div>
+
+        <div class="upload-block">
+            <h3>Agentic AI Interpretation</h3>
+            <p>
+                AI-generated clinical explanations translating model outputs into
+                structured, medically meaningful insights.
+            </p>
+        </div>
+
+        <div class="upload-block">
+            <h3>Transparent Decisions</h3>
+            <p>
+                Designed to enhance clinical trust through interpretable predictions
+                and explainable AI mechanisms.
+            </p>
+        </div>
+
+    </div>
+</div>
+
+<!-- CTA SECTION -->
+<div class="card" style="text-align:center;">
+    <h2>Clinical Decision Support, Not Replacement</h2>
+    <p style="opacity:0.9;">
+        PulmoAI is designed as an assistive AI system to support medical analysis.
+        Final diagnosis and treatment decisions should always be made by qualified
+        healthcare professionals.
+    </p>
+
+    <div style="margin-top:20px;">
+        <a href="/predict">
+            <button>Proceed to Prediction</button>
+        </a>
+    </div>
+</div>
+
+</div>
+</body>
+</html>

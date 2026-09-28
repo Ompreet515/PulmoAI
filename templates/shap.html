@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SHAP | SmartCare</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="shap">
+
+<div class="container">
+
+    {% include "navbar.html" %}
+
+    <div class="card">
+        <h1>SHAP Explanation</h1>
+
+        {% if explanations %}
+        <div class="dual-container">
+
+            {% if explanations.xray %}
+            <div class="dual-column">
+                <h3>Chest X-ray</h3>
+                <img src="{{ url_for('static', filename='shap_xray.png') }}" class="explain-img">
+                <p>{{ explanations.xray }}</p>
+            </div>
+            {% endif %}
+
+            {% if explanations.ct %}
+            <div class="dual-column">
+                <h3>CT Scan</h3>
+                <img src="{{ url_for('static', filename='shap_ct.png') }}" class="explain-img">
+                <p>{{ explanations.ct }}</p>
+            </div>
+            {% endif %}
+
+        </div>
+        {% else %}
+            <p>No SHAP results available. Run prediction first.</p>
+        {% endif %}
+    </div>
+
+</div>
+
+</body>
+</html>
